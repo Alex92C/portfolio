@@ -1,30 +1,35 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   src: string;
   title: string;
   description: string;
   techImages: string[];
+  url: string;
 }
 
-const ProjectCard = ({ src, title, description, techImages }: Props) => {
+const ProjectCard = ({ src, title, description, techImages, url }: Props) => {
   return (
     <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] transform transition-transform duration-500 hover:scale-105 group">
-      <div className="relative overflow-hidden">
-        <Image
-          src={src}
-          alt={title}
-          width={1000}
-          height={1000}
-          className="w-full object-contain transition-brightness duration-500 group-hover:brightness-[0.3]"
-        />
+      <Link href={url}>
+        {/* <a className="group"> */}
+        <div className="relative overflow-hidden">
+          <Image
+            src={src}
+            alt={title}
+            width={1000}
+            height={1000}
+            className="w-full object-contain transition-brightness duration-500 group-hover:brightness-[0.3]"
+          />
 
-        <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white py-2 px-4 rounded-lg text-black font-semibold transition-opacity duration-500 opacity-0 group-hover:opacity-100">
-          Visit
-        </button>
-      </div>
-
+          <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white py-2 px-4 rounded-lg text-black font-semibold transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+            Visit
+          </button>
+        </div>
+        {/* </a> */}
+      </Link>
       <div className="relative p-4">
         <h1 className="text-2xl font-semibold text-white">{title}</h1>
         <p className="mt-2 text-gray-300">{description}</p>

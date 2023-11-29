@@ -57,7 +57,7 @@ export const Frontend_skill = [
   },
   {
     skill_name: "Ant Design",
-    Image: "/antd.svg",
+    Image: "/antd.png",
     width: 80,
     height: 80,
   },

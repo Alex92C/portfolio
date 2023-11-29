@@ -182,9 +182,9 @@ const Footer = () => {
             <p className="flex flex-row items-center my-[15px] cursor-pointer">
               <span className="text-[15px] ml-[6px]">+356 7908 4350</span>
             </p>
-            <p className="flex flex-row items-center my-[15px] cursor-pointer">
-              <span className="text-[15px] ml-[6px]">info@alexcusenza.com</span>
-            </p>
+            {/* <p className="flex flex-row items-center my-[15px] cursor-pointer">
+              <span className="text-[15px] ml-[6px]">info@alexcusenza.net</span>
+            </p> */}
           </div>
           <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
             <div className="font-bold text-[16px]">About</div>
